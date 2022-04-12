@@ -12,7 +12,7 @@ import ScrollableChat from "../Others/ScrollableChat";
 import io from "socket.io-client";
 import UpdateGroupChatModal from "../Others/UpdateGroupChatModal";
 import { ChatState } from "../../Context/ChatProvider";
-const ENDPOINT = "http://localhost:5000"; 
+const ENDPOINT = "http://localhost:5000/"; 
 var socket, selectedChatCompare;
 
 const SingleChat = ({ fetchAgain, setFetchAgain }) => {
