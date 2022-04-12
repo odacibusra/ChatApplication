@@ -3,7 +3,6 @@ import { useState, useEffect } from "react";
 import Chatbox from "../components/Others/Chatbox";
 import MyChats from "../components/Others/MyChats";
 import SideDrawer from "../components/Others/SideDrawer";
-import { ChatState } from "../Context/ChatProvider";
 
 const ChatPage = () => {
   const [fetchAgain, setFetchAgain] = useState(false);

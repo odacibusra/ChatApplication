@@ -1,18 +1,21 @@
-version: "3"
+version: '3'
 services:
-  react-app:
-    image: react-app
-    stdin_open: true
-    ports: 
-      - "3000:3000"
-    networks:
-      - chat-app
-  api-server:
-    image: api-server
+  nodejs-server:
+    build:
+      context: ./backend
     ports:
       - "5000:5000"
-    networks:
-      - chat-app
-networks:
-  chat-app:
-    driver: bridge
+    container_name: node-api
+    volumes:
+       - ./api:/usr/src/app/
+       - /usr/src/app/node_modules
+  react-ui:
+    build:
+      context: ./frontendock
+    ports:
+      - "3000:3000"
+    container_name: react-ui
+    stdin_open: true
+    volumes:
+       - ./frontend:/usr/src/app/frontend
+       - /usr/src/app/frontend/node_modules

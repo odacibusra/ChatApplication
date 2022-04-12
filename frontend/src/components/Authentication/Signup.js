@@ -34,14 +34,14 @@ const Signup = () => {
       return;
     }
     if (password !== confirmpassword) {
-      return;
       toast({
         title: "Passwords Do Not Match",
         status: "warning",
         duration: 5000,
         isClosable: true,
         position: "bottom",
-      });     
+      });   
+      return;
     }
     console.log(name, email, password, pic);
     try {
