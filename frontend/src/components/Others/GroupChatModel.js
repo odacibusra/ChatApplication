@@ -166,7 +166,6 @@ import {
                 ))}
               </Box>
               {loading ? (
-                // <ChatLoading />
                 <div>Loading...</div>
               ) : (
                 searchResult
