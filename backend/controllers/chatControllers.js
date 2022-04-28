@@ -31,7 +31,7 @@ const accessChat = asyncHandler(async (req, res) => {
     var chatData = {
       chatName: "sender",
       isGroupChat: false,
-      users: [userId],
+      users: [req.user._id, userId],
     };
 
     try {

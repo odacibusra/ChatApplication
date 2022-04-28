@@ -31,7 +31,9 @@ const UpdateGroupChatModal = ({ fetchMessages, fetchAgain, setFetchAgain }) => {
   const [renameloading, setRenameLoading] = useState(false);
   const toast = useToast();
 
-  const { selectedChat, setSelectedChat, user } = ChatState();
+  const { selectedChat, setSelectedChat } = ChatState();
+
+  const [user, setUser] = useState(JSON.parse(localStorage.getItem("userInfo")));
 
   const handleSearch = async (query) => {
     setSearch(query);
